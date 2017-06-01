@@ -1,0 +1,301 @@
+{
+    "rock": {
+        "colors": ["#D51F26", "#BE2228"],
+        "genres": [
+            {"name": "all rock", "tag": "rock"},
+            {"name": "indie", "tag": "indie"},
+            {"name": "prog rock", "tag": "prog-rock"},
+            {"name": "post-rock", "tag": "post-rock"},
+            {"name": "rock & roll", "tag": "rock-roll"},
+            {"name": "psychedelic rock", "tag": "psychedelic-rock"},
+            {"name": "hard rock", "tag": "hard-rock"},
+            {"name": "garage rock", "tag": "garage-rock"},
+            {"name": "surf rock", "tag": "surf-rock"},
+            {"name": "instrumental", "tag": "instrumental"},
+            {"name": "math rock", "tag": "math-rock"},
+            {"name": "rockabilly", "tag": "rockabilly"}
+        ]
+    },
+    "alternative": {
+        "colors": ["#E65719", "#CE521D"],
+        "genres": [
+            {"name": "all alternative", "tag": "alternative"},
+            {"name": "indie rock", "tag": "indie-rock"},
+            {"name": "industrial", "tag": "industrial"},
+            {"name": "shoegaze", "tag": "shoegaze"},
+            {"name": "grunge", "tag": "grunge"},
+            {"name": "goth", "tag": "goth"},
+            {"name": "dream pop", "tag": "dream-pop"},
+            {"name": "emo", "tag": "emo"},
+            {"name": "math rock", "tag": "math-rock"},
+            {"name": "britpop", "tag": "britpop"},
+            {"name": "jangle pop", "tag": "jangle-pop"}
+        ]
+    },
+    "hip-hop-rap": {
+        "colors": ["#3564A1", "#355B8D"],
+        "genres": [
+            {"name": "all hip-hop/rap", "tag": "hip-hop-rap"},
+            {"name": "rap", "tag": "rap"},
+            {"name": "underground hip-hop", "tag": "underground-hip-hop"},
+            {"name": "instrumental hip-hop", "tag": "instrumental-hip-hop"},
+            {"name": "trap", "tag": "trap"},
+            {"name": "conscious hip-hop", "tag": "conscious-hip-hop"},
+            {"name": "boom-bap", "tag": "boom-bap"},
+            {"name": "beat-tape", "tag": "beat-tape"},
+            {"name": "hardcore", "tag": "hardcore"},
+            {"name": "grime", "tag": "grime"}
+        ]
+    },
+    "electronic": {
+        "colors": ["#31C823", "#31B125"],
+        "genres": [
+            {"name": "all electronic", "tag": "electronic"},
+            {"name": "house", "tag": "house"},
+            {"name": "electronica", "tag": "electronica"},
+            {"name": "downtempo", "tag": "downtempo"},
+            {"name": "techno", "tag": "techno"},
+            {"name": "electro", "tag": "electro"},
+            {"name": "dubstep", "tag": "dubstep"},
+            {"name": "beats", "tag": "beats"},
+            {"name": "dance", "tag": "dance"},
+            {"name": "idm", "tag": "idm"},
+            {"name": "drum & bass", "tag": "drum-bass"},
+            {"name": "breaks", "tag": "breaks"},
+            {"name": "trance", "tag": "trance"},
+            {"name": "glitch", "tag": "glitch"},
+            {"name": "chiptune", "tag": "chiptune"},
+            {"name": "electro", "tag": "electro"},
+            {"name": "chillwave", "tag": "chillwave"},
+            {"name": "witch house", "tag": "witch-house"},
+            {"name": "vaporwave", "tag": "vaporwave"},
+            {"name": "synthwave", "tag": "synthwave"}
+        ]
+    },
+    "pop": {
+        "colors": ["#F30C93", "#D91186"],
+        "genres": [
+            {"name": "all pop", "tag": "pop"},
+            {"name": "indie pop", "tag": "indie-pop"},
+            {"name": "synth pop", "tag": "synth-pop"},
+            {"name": "power pop", "tag": "power-pop"},
+            {"name": "new wave", "tag": "new-wave"},
+            {"name": "dream pop", "tag": "dream-pop"},
+            {"name": "noise pop", "tag": "noise-pop"},
+            {"name": "experimental pop", "tag": "experimental-pop"},
+            {"name": "electro pop", "tag": "electro-pop"},
+            {"name": "jangle pop", "tag": "jangle-pop"},
+            {"name": "j-pop", "tag": "j-pop"}
+        ]
+    },
+    "acoustic": {
+        "colors": ["#E94949", "#E13D3D"],
+        "genres": [
+            {"name": "all acoustic", "tag": "acoustic"},
+            {"name": "folk", "tag": "folk"},
+            {"name": "singer-songwriter", "tag": "singer-songwriter"},
+            {"name": "americana", "tag": "americana"},
+            {"name": "electro-acoustic", "tag": "electro-acoustic"},
+            {"name": "bluegrass", "tag": "bluegrass"},
+            {"name": "roots", "tag": "roots"}
+        ]
+    },
+    "folk": {
+        "colors": ["#994AB5", "#8A4AA1"],
+        "genres": [
+            {"name": "all folk", "tag": "folk"},
+            {"name": "singer-songwriter", "tag": "singer-songwriter"},
+            {"name": "folk rock", "tag": "folk-rock"},
+            {"name": "indie folk", "tag": "indie-folk"},
+            {"name": "pop folk", "tag": "pop-folk"},
+            {"name": "experimental folk", "tag": "experimental-folk"}
+        ]
+    },
+    "punk": {
+        "colors": ["#F35202", "#D94D07"],
+        "genres": [
+            {"name": "all punk", "tag": "punk"},
+            {"name": "hardcore punk", "tag": "hardcore-punk"},
+            {"name": "garage punk", "tag": "garage-punk"},
+            {"name": "pop punk", "tag": "pop-punk"},
+            {"name": "post-punk", "tag": "post-punk"},
+            {"name": "post-hardcore", "tag": "post-hardcore"},
+            {"name": "thrash", "tag": "thrash"},
+            {"name": "crust punk", "tag": "crust-punk"},
+            {"name": "folk punk", "tag": "folk-punk"},
+            {"name": "no wave", "tag": "no-wave"}
+        ]
+    },
+    "metal": {
+        "colors": ["#990000", "#810303"],
+        "genres": [
+            {"name": "all metal", "tag": "metal"},
+            {"name": "black metal", "tag": "black-metal"},
+            {"name": "death metal", "tag": "death-metal"},
+            {"name": "thrash metal", "tag": "thrash-metal"},
+            {"name": "grindcore", "tag": "grindcore"},
+            {"name": "progressive metal", "tag": "progressive-metal"},
+            {"name": "metalcore", "tag": "metalcore"},
+            {"name": "sludge metal", "tag": "sludge-metal"},
+            {"name": "heavy metal", "tag": "heavy-metal"},
+            {"name": "deathcore", "tag": "deathcore"}
+        ]
+    },
+    "experimental": {
+        "colors": ["#5D19E6", "#581DCE"],
+        "genres": [
+            {"name": "all experimental", "tag": "experimental"},
+            {"name": "noise", "tag": "noise"},
+            {"name": "drone", "tag": "drone"},
+            {"name": "avant garde", "tag": "avant-garde"},
+            {"name": "experimental rock", "tag": "experimental-rock"},
+            {"name": "improvisation", "tag": "improvisation"},
+            {"name": "sound art", "tag": "sound-art"},
+            {"name": "musique concrete", "tag": "musique-concrete"}
+        ]
+    },
+    "r-b-soul": {
+        "colors": ["#54D3A78", "#453767"],
+        "genres": [
+            {"name": "all r&b/soul", "tag": "r-b-soul"},
+            {"name": "soul", "tag": "soul"},
+            {"name": "r&b", "tag": "r-b"},
+            {"name": "neo-soul", "tag": "neo-soul"},
+            {"name": "gospel", "tag": "gospel"},
+            {"name": "contemporary r&b", "tag": "contemporary-r-b"},
+            {"name": "motown", "tag": "motown"},
+            {"name": "urban", "tag": "urban"}
+        ]
+    },
+    "jazz": {
+        "colors": ["#00B89F", "#049F8A"],
+        "genres": [
+            {"name": "all jazz", "tag": "jazz"},
+            {"name": "fusion", "tag": "fusion"},
+            {"name": "big band", "tag": "big-band"},
+            {"name": "nu jazz", "tag": "nu-jazz"},
+            {"name": "modern jazz", "tag": "modern-jazz"},
+            {"name": "swing", "tag": "swing"},
+            {"name": "free jazz", "tag": "free-jazz"},
+            {"name": "soul jazz", "tag": "soul-jazz"},
+            {"name": "latin jazz", "tag": "latin-jazz"},
+            {"name": "vocal jazz", "tag": "vocal-jazz"},
+            {"name": "bebop", "tag": "bebop"},
+            {"name": "spiritual jazz", "tag": "spiritual-jazz"}
+        ]
+    },
+    "blues": {
+        "colors": ["#0077B3", "#03689A"],
+        "genres": [
+            {"name": "all blues", "tag": "blues"},
+            {"name": "rhythm & blues", "tag": "rhythm-blues"},
+            {"name": "blues rock", "tag": "blues-rock"},
+            {"name": "country blues", "tag": "country-blues"},
+            {"name": "boogie-woogie", "tag": "boogie-woogie"},
+            {"name": "delta blues", "tag": "delta-blues"},
+            {"name": "americana", "tag": "americana"},
+            {"name": "electric blues", "tag": "electric-blues"},
+            {"name": "gospel blues", "tag": "gospel-blues"},
+            {"name": "bluegrass", "tag": "bluegrass"}
+        ]
+    },
+    "country": {
+        "colors": ["#429448", "#429448"],
+        "genres": [
+            {"name": "all country", "tag": "country"},
+            {"name": "bluegrass", "tag": "bluegrass"},
+            {"name": "country rock", "tag": "country-rock"},
+            {"name": "americana", "tag": "americana"},
+            {"name": "country folk", "tag": "country-folk"},
+            {"name": "alt-country", "tag": "alt-country"},
+            {"name": "country blues", "tag": "country-blues"},
+            {"name": "western", "tag": "western"},
+            {"name": "honky-tonk", "tag": "honky-tonk"},
+            {"name": "hillbilly", "tag": "hillbilly"}
+        ]
+    },
+    "funk": {
+        "colors": ["#AE003F", "#AE003F"],
+        "genres": [
+            {"name": "all funk", "tag": "funk"},
+            {"name": "funk jam", "tag": "funk-jam"},
+            {"name": "deep funk", "tag": "deep-funk"},
+            {"name": "funk rock", "tag": "funk-rock"},
+            {"name": "jazz funk", "tag": "jazz-funk"},
+            {"name": "boogie", "tag": "boogie"},
+            {"name": "g-funk", "tag": "g-funk"},
+            {"name": "rare groove", "tag": "rare-groove"},
+            {"name": "electro funk", "tag": "electro-funk"},
+            {"name": "go-go", "tag": "go-go"}
+        ]
+    },
+    "devotional": {
+        "colors": ["#04C4E1", "#A09AFC8"],
+        "genres": [
+            {"name": "all devotional", "tag": "devotional"},
+            {"name": "christian", "tag": "christian"},
+            {"name": "gospel", "tag": "gospel"},
+            {"name": "meditation", "tag": "meditation"},
+            {"name": "spiritual", "tag": "spiritual"},
+            {"name": "worship", "tag": "worship"},
+            {"name": "inspirational", "tag": "inspirational"}
+        ]
+    },
+    "soundtrack": {
+        "colors": ["#5E9FCA", "#5594BF"],
+        "genres": [
+            {"name": "all soundtrack", "tag": "soundtrack"},
+            {"name": "film music", "tag": "film-music"},
+            {"name": "video game music", "tag": "video-game-music"}
+        ]
+    },
+    "classical": {
+        "colors": ["#00CCA3", "#04B390"],
+        "genres": [
+            {"name": "all classical", "tag": "classical"},
+            {"name": "orchestral", "tag": "orchestral"},
+            {"name": "neo-classical", "tag": "neo-classical"},
+            {"name": "chamber music", "tag": "chamber-music"},
+            {"name": "classical piano", "tag": "classical-piano"},
+            {"name": "contemporary classical", "tag": "contemporary-classical"},
+            {"name": "baroque", "tag": "baroque"},
+            {"name": "opera", "tag": "opera"},
+            {"name": "choral", "tag": "choral"},
+            {"name": "modern classical", "tag": "modern-classical"}
+        ]
+    },
+    "latin": {
+        "colors": ["#FF9D0A", "#FF9D0A"],
+        "genres": [
+            {"name": "all latin", "tag": "latin"},
+            {"name": "brazilian", "tag": "brazilian"},
+            {"name": "cumbia", "tag": "cumbia"},
+            {"name": "tango", "tag": "tango"},
+            {"name": "latin rock", "tag": "latin-rock"},
+            {"name": "flamenco", "tag": "flamenco"},
+            {"name": "salsa", "tag": "salsa"},
+            {"name": "reggaeton", "tag": "reggaeton"},
+            {"name": "merengue", "tag": "merengue"},
+            {"name": "bolero", "tag": "bolero"},
+            {"name": "méxico d.f.", "tag": "méxico-d.f."},
+            {"name": "bachata", "tag": "bachata"}
+        ]
+    },
+    "world": {
+        "colors": ["#E61964", "#CE1D5E"],
+        "genres": [
+            {"name": "all world", "tag": "world"},
+            {"name": "latin", "tag": "latin"},
+            {"name": "african", "tag": "african"},
+            {"name": "tropical", "tag": "tropical"},
+            {"name": "tribal", "tag": "tribal"},
+            {"name": "brazilian", "tag": "brazilian"},
+            {"name": "celtic", "tag": "celtic"},
+            {"name": "world fusion", "tag": "world-fusion"},
+            {"name": "cumbia", "tag": "cumbia"},
+            {"name": "gypsy", "tag": "gypsy"},
+            {"name": "balkan", "tag": "balkan"},
+            {"name": "reggaeton", "tag": "reggaeton"}
+        ]
+    }
+}
