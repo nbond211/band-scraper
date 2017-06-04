@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import GenreMenu from './genre-menu';
 import genreData from '../genres';
 import fetchAlbumData from '../util/fetch-album-data';
@@ -12,8 +12,10 @@ class App extends Component {
     this.state = {
       mainGenre: rock,
       subGenre: rock,
-      embed: fetchAlbumData(rock)[0].embedId
+      embed: fetchAlbumData(rock)[0].embedId,
+      mobile: false
     }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   setMainGenre = mainGenre => {
@@ -29,21 +31,43 @@ class App extends Component {
     this.setState({embed});
   }
 
+  updateWindowDimensions() {
+    const width = window.innerWidth;
+    this.setState({mobile: width <= 650});
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
   render() {
-    const {mainGenre, subGenre, embed} = this.state;
+    const {mainGenre, subGenre, embed, mobile} = this.state;
     const albums = fetchAlbumData(subGenre);
 
     return (
       <div className="uk-container-large container">
-        <GenreMenu
-          mainGenre={mainGenre}
-          subGenre={subGenre}
-          setMainGenre={this.setMainGenre}
-          setSubGenre={this.setSubGenre}
-          genreData={genreData}
-          embed={embed}
-        />
-        <AlbumGrid setEmbed={this.setEmbed} albums={albums}/>
+        {!mobile &&
+        <div>
+            <GenreMenu
+              mainGenre={mainGenre}
+              subGenre={subGenre}
+              setMainGenre={this.setMainGenre}
+              setSubGenre={this.setSubGenre}
+              genreData={genreData}
+              embed={embed}/>
+            <AlbumGrid setEmbed={this.setEmbed} albums={albums}/>
+          </div>
+        }
+        {mobile &&
+          <div>
+            <h1>Band Scraper is intended for use on devices with larger screens.</h1>
+          </div>
+        }
       </div>
     );
   }
