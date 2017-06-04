@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import GenreMenu from './genre-menu';
 import genreData from '../genres';
+import fetchAlbumData from '../util/fetch-album-data';
+import AlbumGrid from './album-grid';
 import './App.css';
 
 class App extends Component {
@@ -24,6 +26,7 @@ class App extends Component {
 
   render() {
     const {mainGenre, subGenre} = this.state;
+    const albums = fetchAlbumData(subGenre);
 
     return (
       <div className="uk-container-large container">
@@ -34,6 +37,7 @@ class App extends Component {
           setSubGenre={this.setSubGenre}
           genreData={genreData}
         />
+        <AlbumGrid albums={albums}/>
       </div>
     );
   }
