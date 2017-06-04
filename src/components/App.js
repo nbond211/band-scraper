@@ -26,7 +26,7 @@ class App extends Component {
     const {mainGenre, subGenre} = this.state;
 
     return (
-      <div className="uk-container">
+      <div className="uk-container-large container">
         <GenreMenu
           mainGenre={mainGenre}
           subGenre={subGenre}

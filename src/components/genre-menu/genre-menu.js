@@ -42,10 +42,10 @@ class GenreMenu extends Component {
         const subColor = selectedData.colors[1];
 
         return (
-            <div className="genre-menu-container uk-grid">
+            <div data-uk-sticky className="genre-menu-container uk-grid">
                 <div className="uk-width-expand no-padding-right">
                     <div className="title-container">
-                        <h1>
+                        <h1 className="title">
                             <span>Band Scraper</span>
                         </h1>
                     </div>
@@ -69,7 +69,7 @@ class GenreMenu extends Component {
                             
                     </div>
                 </div>
-                <div className="uk-width-auto">
+                <div className="uk-width-auto no-padding-right">
                     <AlbumEmbed/>
                 </div>
 

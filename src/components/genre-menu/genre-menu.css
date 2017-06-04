@@ -1,9 +1,14 @@
-.genre-menu-container {
-    margin-top: 25px;
+.title-container {
+    margin-left: 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #EEF2F3;
+    z-index: 10;
 }
 
-.title-container {
-    height: 80px;
+.title {
+    margin-bottom: 10px;
 }
 
 .menu-bar-container {
