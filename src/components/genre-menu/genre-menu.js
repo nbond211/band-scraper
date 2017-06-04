@@ -27,7 +27,10 @@ class GenreMenu extends Component {
             const tag = genre;
             return {name, tag};
         });
+    }
 
+    setSubGenreButtons = () => {
+        this.subGenreMenu.setButtonVisibility();
     }
 
     render() {
@@ -51,14 +54,19 @@ class GenreMenu extends Component {
                             setGenre={setMainGenre}
                             selected={mainGenre}
                             color={mainColor}
-                            options={this.mainGenres}/>
+                            options={this.mainGenres}
+                            setSubGenreButtons={this.setSubGenreButtons}
+                            />
                     </div>
                     <div className="menu-bar-container">
                         <ScrollMenu
                             setGenre={setSubGenre}
                             selected={subGenre}
                             color={subColor}
-                            options={subGenres}/>
+                            options={subGenres}
+                            onRef={ref => (this.subGenreMenu = ref)}
+                            />
+                            
                     </div>
                 </div>
                 <div className="uk-width-auto">

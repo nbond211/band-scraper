@@ -7,12 +7,16 @@ class GenreButton extends Component {
         setGenre: PropTypes.func,
         name: PropTypes.string,
         tag: PropTypes.string,
-        selected: PropTypes.bool
+        selected: PropTypes.bool,
+        setSubGenreButtons: PropTypes.func
     }
 
     handleClick = () => {
-        const {setGenre, tag} = this.props;
+        const {setGenre, tag, setSubGenreButtons} = this.props;
         setGenre(tag);
+        if (setSubGenreButtons) {
+            setTimeout(setSubGenreButtons, 0);
+        }
     }
 
     render() {

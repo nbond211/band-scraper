@@ -18,7 +18,23 @@ class ScrollMenu extends Component {
         options: PropTypes.array,
         color: PropTypes.string,
         setGenre: PropTypes.func,
-        selected: PropTypes.string
+        selected: PropTypes.string,
+        onRef: PropTypes.func,
+        setSubGenreButtons: PropTypes.func
+    }
+
+    componentDidMount() {
+        const {onRef} = this.props;
+        if (onRef) {
+            this.props.onRef(this);
+        }
+    }
+
+    componentWillUnmount() {
+        const {onRef} = this.props;
+        if (onRef) {
+            this.props.onRef(undefined);
+        }
     }
 
     setButtonVisibility = () => {
@@ -42,7 +58,7 @@ class ScrollMenu extends Component {
 
     render() {
         const {displayLeft, displayRight} = this.state;
-        const {options, setGenre, selected} = this.props;
+        const {options, setGenre, selected, setSubGenreButtons} = this.props;
 
         const buttons = options.map(option => {
             return (
@@ -52,6 +68,7 @@ class ScrollMenu extends Component {
                     name={option.name}
                     setGenre={setGenre}
                     selected={selected === option.tag}
+                    setSubGenreButtons={setSubGenreButtons}
                 />
             );
         });
