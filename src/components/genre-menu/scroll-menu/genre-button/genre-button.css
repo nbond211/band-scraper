@@ -1,0 +1,14 @@
+.genre-button {
+    background-color: transparent;
+    border-radius: 14px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    margin: 7px 0;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in;
+}

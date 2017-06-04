@@ -1,0 +1,15 @@
+.genre-menu-container {
+    margin-top: 25px;
+}
+
+.title-container {
+    height: 80px;
+}
+
+.menu-bar-container {
+    height: 60px;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
