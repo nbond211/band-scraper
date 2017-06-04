@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GenreMenu from './genre-menu';
+import genreData from '../genres';
 import './App.css';
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
   }
 
   setMainGenre = mainGenre => {
-    this.setState({mainGenre});
+    const subGenre = genreData[mainGenre].genres[0].tag;
+    this.setState({mainGenre, subGenre});
   }
 
   setSubGenre = subGenre => {
@@ -30,6 +32,7 @@ class App extends Component {
           subGenre={subGenre}
           setMainGenre={this.setMainGenre}
           setSubGenre={this.setSubGenre}
+          genreData={genreData}
         />
       </div>
     );
