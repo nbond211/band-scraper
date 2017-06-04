@@ -13,7 +13,7 @@ class AlbumGrid extends Component {
     const {albums, setEmbed} = this.props;
     const albumCards = albums.map(album => {
         return (
-            <div key={album.title} className="uk-width-1-6">
+            <div key={album.title} className="uk-width-1-6@xl uk-width-1-5@l uk-width-1-4@m uk-width-1-3@s">
                 <AlbumCard
                     title={album.title}
                     artist={album.artist}
