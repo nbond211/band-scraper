@@ -17,6 +17,14 @@
     width: 0 !important;
 }
 
+.left-icon-container {
+    margin-right: 10px;
+}
+
+.right-icon-container {
+    margin-left: 10px;
+}
+
 .icon {
     color: #fff;
 } 
