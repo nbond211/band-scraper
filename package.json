@@ -14,7 +14,9 @@
     "babel-register": "^6.24.1",
     "bluebird": "^3.5.0",
     "cheerio": "^0.22.0",
+    "jquery": "^3.2.1",
     "jsonfile": "^2.4.0",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "request-promise": "^4.2.1"

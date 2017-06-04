@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import $ from 'jquery';
 import './scroll-menu.css'
 import GenreButton from './genre-button';
@@ -16,7 +17,8 @@ class ScrollMenu extends Component {
     static propTypes = {
         options: PropTypes.array,
         color: PropTypes.string,
-        onClickOption: PropTypes.func
+        setGenre: PropTypes.func,
+        selected: PropTypes.string
     }
 
     setButtonVisibility = () => {
@@ -40,7 +42,7 @@ class ScrollMenu extends Component {
 
     render() {
         const {displayLeft, displayRight} = this.state;
-        const {options, onClickOption} = this.props;
+        const {options, setGenre, selected} = this.props;
 
         const buttons = options.map(option => {
             return (
@@ -48,7 +50,8 @@ class ScrollMenu extends Component {
                     key={option.tag}
                     tag={option.tag}
                     name={option.name}
-                    onClick={onClickOption}
+                    setGenre={setGenre}
+                    selected={selected === option.tag}
                 />
             );
         });

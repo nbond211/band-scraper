@@ -1,17 +1,26 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './genre-button.css';
 
 class GenreButton extends Component {
     static propTypes = {
-        onClick: PropTypes.func,
+        setGenre: PropTypes.func,
         name: PropTypes.string,
-        tag: PropTypes.string
+        tag: PropTypes.string,
+        selected: PropTypes.bool
     }
+
+    handleClick = () => {
+        const {setGenre, tag} = this.props;
+        setGenre(tag);
+    }
+
     render() {
-        const {name} = this.props;
+        const {name, selected} = this.props;
+        const style = selected ? {backgroundColor: '#000'} : undefined;
 
         return (
-            <span className="genre-button">{name}</span>
+            <span className="genre-button" onClick={this.handleClick} style={style}>{name}</span>
         );
     }
 }

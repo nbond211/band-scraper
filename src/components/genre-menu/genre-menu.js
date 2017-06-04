@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './genre-menu.css';
 import genreData from '../../genres';
 import AlbumEmbed from './album-embed';
@@ -14,17 +15,17 @@ const mainGenres = genres.map(genre => {
     };
 });
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selected: 'rock'
-        };
+class GenreMenu extends Component {
+    static propTypes = {
+        mainGenre: PropTypes.string,
+        subGenre: PropTypes.string,
+        setMainGenre: PropTypes.func,
+        setSubGenre: PropTypes.func
     }
 
     render() {
-        const {selected} = this.state;
-        const selectedData = genreData[selected];
+        const {mainGenre, subGenre, setMainGenre, setSubGenre} = this.props;
+        const selectedData = genreData[mainGenre];
 
         const subGenres = selectedData.genres;
         const mainColor = selectedData.colors[0];
@@ -39,10 +40,20 @@ class App extends Component {
                         </h1>
                     </div>
                     <div className="menu-bar-container">
-                        <ScrollMenu color={mainColor} options={mainGenres}/>
+                        <ScrollMenu 
+                            setGenre={setMainGenre} 
+                            selected={mainGenre} 
+                            color={mainColor} 
+                            options={mainGenres}
+                        />
                     </div>
                     <div className="menu-bar-container">
-                        <ScrollMenu color={subColor} options={subGenres}/>
+                        <ScrollMenu 
+                            setGenre={setSubGenre} 
+                            selected={subGenre} 
+                            color={subColor} 
+                            options={subGenres}
+                        />
                     </div>
                 </div>
                 <div className="uk-width-auto">
@@ -54,4 +65,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default GenreMenu;
