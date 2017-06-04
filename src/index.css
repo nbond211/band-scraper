@@ -10,3 +10,10 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 }
+
+::selection {
+  background: #00B89F; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #00B89F; /* Gecko Browsers */
+}
