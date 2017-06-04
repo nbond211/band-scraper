@@ -155,7 +155,7 @@
         ]
     },
     "r-b-soul": {
-        "colors": ["#54D3A78", "#453767"],
+        "colors": ["#4D3A78", "#453767"],
         "genres": [
             {"name": "all r&b/soul", "tag": "r-b-soul"},
             {"name": "soul", "tag": "soul"},
@@ -200,7 +200,7 @@
         ]
     },
     "country": {
-        "colors": ["#429448", "#429448"],
+        "colors": ["#429448", "#418145"],
         "genres": [
             {"name": "all country", "tag": "country"},
             {"name": "bluegrass", "tag": "bluegrass"},
@@ -215,7 +215,7 @@
         ]
     },
     "funk": {
-        "colors": ["#AE003F", "#AE003F"],
+        "colors": ["#AE003F", "#950339"],
         "genres": [
             {"name": "all funk", "tag": "funk"},
             {"name": "funk jam", "tag": "funk-jam"},
@@ -230,7 +230,7 @@
         ]
     },
     "devotional": {
-        "colors": ["#04C4E1", "#A09AFC8"],
+        "colors": ["#04C4E1", "#09AFC8"],
         "genres": [
             {"name": "all devotional", "tag": "devotional"},
             {"name": "christian", "tag": "christian"},
@@ -265,7 +265,7 @@
         ]
     },
     "latin": {
-        "colors": ["#FF9D0A", "#FF9D0A"],
+        "colors": ["#FF9D0A", "#EF9206"],
         "genres": [
             {"name": "all latin", "tag": "latin"},
             {"name": "brazilian", "tag": "brazilian"},
