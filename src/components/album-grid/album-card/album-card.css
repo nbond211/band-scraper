@@ -1,0 +1,12 @@
+.album-card {
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.album-title {
+    font-size: 1.2rem;
+}
