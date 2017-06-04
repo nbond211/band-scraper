@@ -10,7 +10,8 @@ class GenreMenu extends Component {
         subGenre: PropTypes.string,
         setMainGenre: PropTypes.func,
         setSubGenre: PropTypes.func,
-        genreData: PropTypes.object
+        genreData: PropTypes.object,
+        embed: PropTypes.string
     }
 
     constructor(props) {
@@ -34,7 +35,7 @@ class GenreMenu extends Component {
     }
 
     render() {
-        const {mainGenre, subGenre, setMainGenre, setSubGenre, genreData} = this.props;
+        const {mainGenre, subGenre, setMainGenre, setSubGenre, genreData, embed} = this.props;
         const selectedData = genreData[mainGenre];
 
         const subGenres = selectedData.genres;
@@ -70,7 +71,7 @@ class GenreMenu extends Component {
                     </div>
                 </div>
                 <div className="uk-width-auto no-padding-right">
-                    <AlbumEmbed/>
+                    <AlbumEmbed embedId={embed}/>
                 </div>
 
             </div>

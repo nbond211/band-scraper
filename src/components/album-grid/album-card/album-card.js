@@ -7,14 +7,20 @@ class AlbumCard extends Component {
       imageUrl: PropTypes.string,
       title: PropTypes.string,
       artist: PropTypes.string,
-      embedId: PropTypes.string
+      embedId: PropTypes.string,
+      setEmbed: PropTypes.func
+  }
+
+  handleClick = () => {
+      const {embedId, setEmbed} = this.props;
+      setEmbed(embedId);
   }
 
   render() {
     const {imageUrl, title, artist} = this.props;
 
     return (
-      <div className="uk-card uk-card-default uk-card-hover album-card">
+      <div onClick={this.handleClick} className="uk-card uk-card-default uk-card-hover album-card">
             <div className="uk-card-media-top">
                 <img src={imageUrl} alt={title}/>
             </div>

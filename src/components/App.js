@@ -8,10 +8,11 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-
+    const rock = 'rock';
     this.state = {
-      mainGenre: 'rock',
-      subGenre: 'rock'
+      mainGenre: rock,
+      subGenre: rock,
+      embed: fetchAlbumData(rock)[0].embedId
     }
   }
 
@@ -24,8 +25,12 @@ class App extends Component {
     this.setState({subGenre});
   }
 
+  setEmbed = embed => {
+    this.setState({embed});
+  }
+
   render() {
-    const {mainGenre, subGenre} = this.state;
+    const {mainGenre, subGenre, embed} = this.state;
     const albums = fetchAlbumData(subGenre);
 
     return (
@@ -36,8 +41,9 @@ class App extends Component {
           setMainGenre={this.setMainGenre}
           setSubGenre={this.setSubGenre}
           genreData={genreData}
+          embed={embed}
         />
-        <AlbumGrid albums={albums}/>
+        <AlbumGrid setEmbed={this.setEmbed} albums={albums}/>
       </div>
     );
   }
