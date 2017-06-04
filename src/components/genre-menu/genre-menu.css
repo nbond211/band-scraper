@@ -16,6 +16,16 @@
     font-weight: 300;
 }
 
+.title-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.title-link:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .menu-bar-container {
     height: 60px;
 }

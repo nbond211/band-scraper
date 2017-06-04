@@ -47,7 +47,7 @@ class GenreMenu extends Component {
                 <div className="uk-width-expand no-padding-right">
                     <div className="title-container">
                         <h1 className="title">
-                            <span>Band Scraper</span>
+                            <a className="title-link" href="/">Band Scraper</a>
                         </h1>
                     </div>
                     <div className="menu-bar-container">
