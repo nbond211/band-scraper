@@ -3,7 +3,7 @@ import cheerio from 'cheerio';
 import bluebird from 'bluebird';
 import jsonfile from 'jsonfile';
 import retry from 'async-retry';
-import genreData from '../src/data/genres';
+import genreData from '../src/genres';
 import eachSeries from 'async/eachSeries';
 
 function options(uri) {
@@ -21,22 +21,29 @@ function removePaidAlbums(data) {
     });
 }
 
-async function getAllFreeAlbumsForTag(tag) {
+async function getAllFreeAlbumsForTag(tag, log) {
     const urls = await getAllUrlsForTag(tag);
     const count = urls.length;
     const albums = await bluebird.map(urls, (url, index) => {
         console.log(`getting info for album ${index} of ${count} | Tag: ${tag}`);
-        return getInfoIfFree(url);
+        if (log && log[url]) {
+            return log[url];
+        } else {
+            return getInfoIfFree(url, log);
+        }
     }, {concurrency: 10});
-    return removePaidAlbums(albums);
+    const data = removePaidAlbums(albums);
+    return {data, log: log ? log : newLog};
 }
 
-async function getInfoIfFree(url) {
+async function getInfoIfFree(url, log) {
+    console.log('making request');
     try {
         return await retry(async bail => {
             const $ = await rp(options(url));
             if ($('.buyItemNyp').text().indexOf('name your price') != -1 || $('.download-link').text().indexOf('Free Download') != -1) {
-                return {
+                const data = {
+                    url,
                     title: $('h2.trackTitle')
                         .text()
                         .replace('\n            ', '')
@@ -48,8 +55,12 @@ async function getInfoIfFree(url) {
                         .replace("https://bandcamp.com/EmbeddedPlayer/v=2/album=", "")
                         .replace("/size=large/tracklist=false/artwork=small/", "")
                 }
+                log[url] = data;
+                return data;
             } else {
-                return 'nope';
+                const paid = 'paid';
+                log[url] = paid;
+                return paid;
             }
         }, {retries: 500});
     } catch (e) {
@@ -105,7 +116,14 @@ export default async function scrape() {
     genres = Array.from(new Set(genres));
 
     eachSeries(genres, async (genre, callback) => {
-        const data = await getAllFreeAlbumsForTag(genre);
+        let oldLog;
+        try {
+            oldLog = require(`../src/logs/${genre}`);
+        } catch (ex) {
+            oldLog = {};
+        }
+        const {log, data} = await getAllFreeAlbumsForTag(genre, oldLog);
+        await jsonfile.writeFileSync(`./src/logs/${genre}.json`, log, {spaces: 2});
         await jsonfile.writeFileSync(`./src/data/${genre}.json`, data, {spaces: 2});
         callback();
     }, err => console.log('finished'));
